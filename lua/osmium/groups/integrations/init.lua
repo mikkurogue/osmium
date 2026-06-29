@@ -21,6 +21,9 @@ local function highlight_integrations(highlights, configs)
     if configs.integrations.oil then
         combined = require("osmium.groups.integrations.oil")(combined, configs.colors)
     end
+    if configs.integrations.mini_icons then
+        combined = require("osmium.groups.integrations.mini-icons")(combined, configs.colors)
+    end
 
     return combined
 end
